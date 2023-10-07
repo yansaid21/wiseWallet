@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import Svg, { Rect, Defs, Pattern, Use, Image } from "react-native-svg"
-import { StatusBar } from "expo-status-bar";
+import { StyleSheet } from "react-native";
+import Svg, { Rect, Defs, Pattern, Use, Image } from "react-native-svg";
+
 function SvgTop(){
     return(
         <Svg
@@ -30,86 +30,13 @@ function SvgTop(){
         </Svg>
     )
 }
-const Login = ({navigation}) =>{
-    return(
-        <View style={styles.container}>
-            <SvgTop/>
-            <View style={styles.textContainer}>
-                <Text style={styles.title}>Bienvenido a Wise Wallet</Text>
-            </View>
-            <TextInput
-                placeholder="Correo"
-                placeholderTextColor='#F5F5F5'
 
-                style={styles.textInput}
-                textColor='#F5F5F5'
-            />
-            <TextInput
-                placeholder="Contraseña"
-                secureTextEntry={true}
-                placeholderTextColor='#F5F5F5'
-                style={styles.textInput}
-            />
-            <TouchableOpacity
-                style={styles.customButton}
-                onPress={() => {
-                    navigation.navigate("Sigin");
-                }}
-            >
-                <Text style={styles.buttonText}>Ingresar</Text>
-            </TouchableOpacity>
-            <StatusBar style="auto"/>
-        </View>
-    )
-}
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#323232',
-      color:'#F8F8F8',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    title:{
-        fontSize:30,
-        color:'#F8F8F8'
-    },
-    textInput:{
-        borderWidth:2,
-        borderColor:'#5213C5',
-        padding:10,
-        width:'80%',
-        height:50,
-        marginTop:20,
-        borderRadius:13,
-        color:'#F5F5F5',
-        top: 250,
-    },
     svgTop: {
         position: 'absolute',
         top: 0,
     },
-    textContainer: {
-        position: 'absolute',
-        top: 130,
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
+});
 
-    },
-    customButton: {
-        backgroundColor: "#5213C5", // Cambiar el color de fondo del botón
-        width: "80%",
-        height: 50,
-        marginTop: 280,
-        borderRadius: 13,
-        alignItems: "center",
-        justifyContent: "center",
-      },
-      buttonText: {
-        fontSize: 18,
-        color: "#F8F8F8", // Cambiar el color del texto del botón
-      },
 
-  });
-export default Login;
+export default SvgTop;

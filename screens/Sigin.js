@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 const Sigin = ({navigation}) =>{
     return(
         <View style={styles.container}>
-            <Text>Home</Text>
+            <Text>Registrarse</Text>
         </View>
     )
 }
